@@ -1,0 +1,516 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/nicot/Dropbox (CEDIA)/ULaval/Travail/SLIM/Selection/selectcode.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Aug 2016, 11:16:41
+{txt}
+{com}. 
+. //Simulation de regressions
+. clear all
+{txt}
+{com}. cd "/Users/nicot/Dropbox (CEDIA)/ULaval/Travail/SLIM/Selection"
+{res}/Users/nicot/Dropbox (CEDIA)/ULaval/Travail/SLIM/Selection
+{txt}
+{com}. 
+. set obs 1000
+{txt}{p}
+number of observations (_N)  was 0,
+now 1,000
+{p_end}
+
+{com}. set seed 123
+{txt}
+{com}. 
+. *creation du modele
+. gen expo=rnormal(0,1)
+{txt}
+{com}. gen x=rnormal(0,1)
+{txt}
+{com}. gen inter=expo*x
+{txt}
+{com}. 
+. gen error=rnormal(0,1)
+{txt}
+{com}. 
+. gen y=1+expo+x+inter+error
+{txt}
+{com}. 
+. sum y expo x inter
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}y {c |}{res}      1,000    .9978072    1.987555  -6.321197   10.84289
+{txt}{space 8}expo {c |}{res}      1,000    .0204975    .9719571  -4.604603   2.807839
+{txt}{space 11}x {c |}{res}      1,000    .0202697    .9961863  -3.542322    3.40045
+{txt}{space 7}inter {c |}{res}      1,000    -.002354    .9786722  -8.675727   5.957363
+{txt}
+{com}. 
+. regress y expo x inter
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     1,000
+{txt}{hline 13}{c +}{hline 34}   F(3, 996)       = {res}   936.14
+{txt}       Model {c |} {res} 2913.24857         3  971.082857   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 1033.17408       996  1.03732337   {txt}R-squared       ={res}    0.7382
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7374
+{txt}       Total {c |} {res} 3946.42265       999  3.95037303   {txt}Root MSE        =   {res} 1.0185
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}expo {c |}{col 14}{res}{space 2} 1.018943{col 26}{space 2} .0331618{col 37}{space 1}   30.73{col 46}{space 3}0.000{col 54}{space 4}  .953868{col 67}{space 3} 1.084018
+{txt}{space 11}x {c |}{col 14}{res}{space 2} 1.015131{col 26}{space 2}  .032414{col 37}{space 1}   31.32{col 46}{space 3}0.000{col 54}{space 4} .9515233{col 67}{space 3} 1.078738
+{txt}{space 7}inter {c |}{col 14}{res}{space 2} 1.023784{col 26}{space 2} .0330023{col 37}{space 1}   31.02{col 46}{space 3}0.000{col 54}{space 4} .9590223{col 67}{space 3} 1.088546
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .958755{col 26}{space 2} .0322214{col 37}{space 1}   29.76{col 46}{space 3}0.000{col 54}{space 4} .8955253{col 67}{space 3} 1.021985
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. *outtex, detail level legend title(R\'{c -(}e{c )-}gression : mod\`{c -(}e{c )-}le de base) key(modele)
+. 
+. *selection aleatoire
+. gen toto = runiform()
+{txt}
+{com}. sort toto
+{txt}
+{com}. generate random = _n <= 750
+{txt}
+{com}. 
+. bysort random: summarize x
+
+{txt}{hline}
+-> random = 0
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}x {c |}{res}        250    .0091655    1.104196  -3.023799    3.40045
+
+{txt}{hline}
+-> random = 1
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}x {c |}{res}        750    .0239711    .9582475  -3.542322   3.139379
+
+{txt}
+{com}. 
+. regress y expo x inter if random==1
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       750
+{txt}{hline 13}{c +}{hline 34}   F(3, 746)       = {res}   703.93
+{txt}       Model {c |} {res} 2098.52164         3  699.507212   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 741.315286       746  .993720222   {txt}R-squared       ={res}    0.7390
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7379
+{txt}       Total {c |} {res} 2839.83692       749  3.79150457   {txt}Root MSE        =   {res} .99686
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}expo {c |}{col 14}{res}{space 2} 1.059464{col 26}{space 2}  .037394{col 37}{space 1}   28.33{col 46}{space 3}0.000{col 54}{space 4} .9860545{col 67}{space 3} 1.132874
+{txt}{space 11}x {c |}{col 14}{res}{space 2} 1.040988{col 26}{space 2} .0380342{col 37}{space 1}   27.37{col 46}{space 3}0.000{col 54}{space 4} .9663211{col 67}{space 3} 1.115655
+{txt}{space 7}inter {c |}{col 14}{res}{space 2} 1.031223{col 26}{space 2} .0402996{col 37}{space 1}   25.59{col 46}{space 3}0.000{col 54}{space 4} .9521084{col 67}{space 3} 1.110337
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9707738{col 26}{space 2} .0364255{col 37}{space 1}   26.65{col 46}{space 3}0.000{col 54}{space 4} .8992651{col 67}{space 3} 1.042283
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. *outtex, detail level legend title(R\'{c -(}e{c )-}gression : s\'{c -(}e{c )-}lection al\'{c -(}e{c )-}atoire (MCAR))
+. 
+. 
+. *selection sur x, avec x et expo correles
+. sort x
+{txt}
+{com}. gen n1=_n
+{txt}
+{com}. gen selectx=n1 <= 750
+{txt}
+{com}. 
+. bysort selectx: summarize x
+
+{txt}{hline}
+-> selectx = 0
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}x {c |}{res}        250    1.274757    .5667745   .6579035    3.40045
+
+{txt}{hline}
+-> selectx = 1
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}x {c |}{res}        750   -.3978927    .7186514  -3.542322    .657464
+
+{txt}
+{com}. 
+. regress y expo x inter if selectx==1
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       750
+{txt}{hline 13}{c +}{hline 34}   F(3, 746)       = {res}   337.98
+{txt}       Model {c |} {res} 1006.48905         3  335.496351   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 740.528516       746   .99266557   {txt}R-squared       ={res}    0.5761
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5744
+{txt}       Total {c |} {res} 1747.01757       749  2.33246672   {txt}Root MSE        =   {res} .99633
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}expo {c |}{col 14}{res}{space 2} 1.019353{col 26}{space 2} .0424256{col 37}{space 1}   24.03{col 46}{space 3}0.000{col 54}{space 4} .9360654{col 67}{space 3} 1.102641
+{txt}{space 11}x {c |}{col 14}{res}{space 2} .9721352{col 26}{space 2} .0507898{col 37}{space 1}   19.14{col 46}{space 3}0.000{col 54}{space 4} .8724273{col 67}{space 3} 1.071843
+{txt}{space 7}inter {c |}{col 14}{res}{space 2} 1.027505{col 26}{space 2} .0529332{col 37}{space 1}   19.41{col 46}{space 3}0.000{col 54}{space 4} .9235897{col 67}{space 3} 1.131421
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9320326{col 26}{space 2} .0416651{col 37}{space 1}   22.37{col 46}{space 3}0.000{col 54}{space 4} .8502378{col 67}{space 3} 1.013827
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. *outtex, detail level legend title(R\'{c -(}e{c )-}gression : s\'{c -(}e{c )-}lection sur x (MAR))
+. 
+. *selection sur y
+. sort y
+{txt}
+{com}. gen n2=_n
+{txt}
+{com}. gen selecty=n2 <= 750
+{txt}
+{com}. 
+. bysort selecty: summarize y
+
+{txt}{hline}
+-> selecty = 0
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}y {c |}{res}        250    3.634055     1.46297   2.097084   10.84289
+
+{txt}{hline}
+-> selecty = 1
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 11}y {c |}{res}        750    .1190579    1.210155  -6.321197   2.069365
+
+{txt}
+{com}. 
+. regress y expo x inter if selecty==1
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       750
+{txt}{hline 13}{c +}{hline 34}   F(3, 746)       = {res}   196.82
+{txt}       Model {c |} {res} 484.617296         3  161.539099   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 612.274102       746  .820742764   {txt}R-squared       ={res}    0.4418
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4396
+{txt}       Total {c |} {res}  1096.8914       749   1.4644745   {txt}Root MSE        =   {res} .90595
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           y{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}expo {c |}{col 14}{res}{space 2} .7459536{col 26}{space 2} .0402281{col 37}{space 1}   18.54{col 46}{space 3}0.000{col 54}{space 4} .6669798{col 67}{space 3} .8249275
+{txt}{space 11}x {c |}{col 14}{res}{space 2}  .731424{col 26}{space 2} .0413839{col 37}{space 1}   17.67{col 46}{space 3}0.000{col 54}{space 4} .6501812{col 67}{space 3} .8126669
+{txt}{space 7}inter {c |}{col 14}{res}{space 2} .8337301{col 26}{space 2} .0405708{col 37}{space 1}   20.55{col 46}{space 3}0.000{col 54}{space 4} .7540836{col 67}{space 3} .9133766
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5888732{col 26}{space 2} .0384818{col 37}{space 1}   15.30{col 46}{space 3}0.000{col 54}{space 4} .5133277{col 67}{space 3} .6644187
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. *outtex, detail level legend title(R\'{c -(}e{c )-}gression : s\'{c -(}e{c )-}lection sur y (NMAR))
+. 
+. 
+. //Simulation MC
+. *modele
+. clear all
+{txt}
+{com}. capture program drop model
+{txt}
+{com}. program define model, rclass
+{txt}  1{com}. 
+. drop _all
+{txt}  2{com}. set obs 1000
+{txt}  3{com}. 
+. generate expo = rnormal(0,1)
+{txt}  4{com}. generate x = rnormal(0,1)
+{txt}  5{com}. generate inter=expo*x
+{txt}  6{com}. generate error = rnormal(0,1)
+{txt}  7{com}. generate y = 1 + expo + x + inter + error
+{txt}  8{com}. 
+. regress y expo x inter
+{txt}  9{com}. 
+. return scalar bcons = _b[_cons]
+{txt} 10{com}. return scalar bexpo = _b[expo]
+{txt} 11{com}. return scalar bx = _b[x]
+{txt} 12{com}. return scalar binter = _b[inter]
+{txt} 13{com}. end
+{txt}
+{com}. 
+. simulate b_cons=r(bcons) b_expo=r(bexpo) b_x=r(bx) b_inter=r(binter), reps(1000) nodots: model
+{p2colset 7 17 21 2}{...}
+
+{txt}{p2col :command:}model{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_cons:}{res:r(bcons)}{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_expo:}{res:r(bexpo)}{p_end}
+{p2colset 11 17 21 2}{...}
+{p2col :b_x:}{res:r(bx)}{p_end}
+{p2colset 7 17 21 2}{...}
+{p2col :b_inter:}{res:r(binter)}{p_end}
+
+
+{com}. 
+. program drop _all
+{txt}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}b_cons {c |}{res}      1,000    .9986508    .0313321   .8839754   1.103671
+{txt}{space 6}b_expo {c |}{res}      1,000    1.000525      .03217   .9012343   1.089759
+{txt}{space 9}b_x {c |}{res}      1,000    1.001356    .0322228   .9023424   1.096507
+{txt}{space 5}b_inter {c |}{res}      1,000    .9975404    .0327809   .8787383   1.100114
+{txt}
+{com}. hist b_expo, xtitle(exposition) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.90123433{txt}, width={res}.00650086{txt})
+{res}{txt}
+{com}. graph save hist_b_expo, replace
+{res}{txt}(file hist_b_expo.gph saved)
+
+{com}. hist b_inter, xtitle(interaction) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.87873834{txt}, width={res}.00763365{txt})
+{res}{txt}
+{com}. graph save hist_b_inter, replace
+{res}{txt}(file hist_b_inter.gph saved)
+
+{com}. graph combine hist_b_expo.gph hist_b_inter.gph, title("Paramètres pour exposition et interaction:" "Modèle de base", color(black)) graphregion(fcolor(white))
+{res}{txt}
+{com}. 
+. gr export "model.eps", as(eps) preview(off) replace
+{txt}(file model.eps written in EPS format)
+
+{com}. 
+. 
+. *selection aleatoire
+. clear all
+{txt}
+{com}. capture program drop random
+{txt}
+{com}. program define random, rclass
+{txt}  1{com}. 
+. drop _all
+{txt}  2{com}. set obs 1000
+{txt}  3{com}. 
+. generate expo = rnormal(0,1)
+{txt}  4{com}. generate x = rnormal(0,1)
+{txt}  5{com}. generate inter=expo*x
+{txt}  6{com}. generate error = rnormal(0,1)
+{txt}  7{com}. generate y = 1 + expo + x + inter + error
+{txt}  8{com}. 
+. gen toto = runiform()
+{txt}  9{com}. sort toto
+{txt} 10{com}. generate random = _n <= 750
+{txt} 11{com}. 
+. regress y expo x inter if random==1
+{txt} 12{com}. 
+. return scalar bcons = _b[_cons]
+{txt} 13{com}. return scalar bexpo = _b[expo]
+{txt} 14{com}. return scalar bx = _b[x]
+{txt} 15{com}. return scalar binter = _b[inter]
+{txt} 16{com}. end
+{txt}
+{com}. 
+. simulate b_cons=r(bcons) b_expo=r(bexpo) b_x=r(bx) b_inter=r(binter), reps(1000) nodots: random
+{p2colset 7 17 21 2}{...}
+
+{txt}{p2col :command:}random{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_cons:}{res:r(bcons)}{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_expo:}{res:r(bexpo)}{p_end}
+{p2colset 11 17 21 2}{...}
+{p2col :b_x:}{res:r(bx)}{p_end}
+{p2colset 7 17 21 2}{...}
+{p2col :b_inter:}{res:r(binter)}{p_end}
+
+
+{com}. 
+. program drop _all
+{txt}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}b_cons {c |}{res}      1,000    .9988118    .0363242   .8671843   1.113319
+{txt}{space 6}b_expo {c |}{res}      1,000    .9996793    .0371919   .8924965   1.111483
+{txt}{space 9}b_x {c |}{res}      1,000    .9998527    .0353161   .8851036   1.148267
+{txt}{space 5}b_inter {c |}{res}      1,000    1.001782     .037343   .8821909   1.108563
+{txt}
+{com}. hist b_expo, xtitle(exposition) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.89249647{txt}, width={res}.00755125{txt})
+{res}{txt}
+{com}. graph save hist_b_expo, replace
+{res}{txt}(file hist_b_expo.gph saved)
+
+{com}. hist b_inter, xtitle(interaction) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.88219094{txt}, width={res}.00780593{txt})
+{res}{txt}
+{com}. graph save hist_b_inter, replace
+{res}{txt}(file hist_b_inter.gph saved)
+
+{com}. graph combine hist_b_expo.gph hist_b_inter.gph, title("Paramètres pour exposition et interaction:" "Sélection aléatoire (MCAR)", color(black)) graphregion(fcolor(white))
+{res}{txt}
+{com}. 
+. gr export "random.eps", as(eps) preview(off) replace
+{txt}(file random.eps written in EPS format)
+
+{com}. 
+. 
+. *selection sur x
+. clear all
+{txt}
+{com}. capture program drop selectx
+{txt}
+{com}. program define selectx, rclass
+{txt}  1{com}. 
+. drop _all
+{txt}  2{com}. set obs 1000
+{txt}  3{com}. 
+. generate expo = rnormal(0,1)
+{txt}  4{com}. generate x = rnormal(0,1)
+{txt}  5{com}. generate inter=expo*x
+{txt}  6{com}. generate error = rnormal(0,1)
+{txt}  7{com}. generate y = 1 + expo + x + inter + error
+{txt}  8{com}. 
+. sort x
+{txt}  9{com}. gen n1=_n
+{txt} 10{com}. gen selectx=n1 <= 750
+{txt} 11{com}. 
+. regress y expo x inter if selectx==1
+{txt} 12{com}. 
+. return scalar bcons = _b[_cons]
+{txt} 13{com}. return scalar bexpo = _b[expo]
+{txt} 14{com}. return scalar bx = _b[x]
+{txt} 15{com}. return scalar binter = _b[inter]
+{txt} 16{com}. end
+{txt}
+{com}. 
+. simulate b_cons=r(bcons) b_expo=r(bexpo) b_x=r(bx) b_inter=r(binter), reps(1000) nodots: selectx
+{p2colset 7 17 21 2}{...}
+
+{txt}{p2col :command:}selectx{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_cons:}{res:r(bcons)}{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_expo:}{res:r(bexpo)}{p_end}
+{p2colset 11 17 21 2}{...}
+{p2col :b_x:}{res:r(bx)}{p_end}
+{p2colset 7 17 21 2}{...}
+{p2col :b_inter:}{res:r(binter)}{p_end}
+
+
+{com}. 
+. program drop _all
+{txt}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}b_cons {c |}{res}      1,000    1.002956    .0427962   .8598431   1.115789
+{txt}{space 6}b_expo {c |}{res}      1,000    .9985082    .0402189   .8850054   1.132673
+{txt}{space 9}b_x {c |}{res}      1,000    1.002135    .0504367   .8331351   1.155716
+{txt}{space 5}b_inter {c |}{res}      1,000    .9988019    .0504382   .8721379     1.1764
+{txt}
+{com}. hist b_expo, xtitle(exposition) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.88500541{txt}, width={res}.00854027{txt})
+{res}{txt}
+{com}. graph save hist_b_expo, replace
+{res}{txt}(file hist_b_expo.gph saved)
+
+{com}. hist b_inter, xtitle(interaction) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.8721379{txt}, width={res}.01049181{txt})
+{res}{txt}
+{com}. graph save hist_b_inter, replace
+{res}{txt}(file hist_b_inter.gph saved)
+
+{com}. graph combine hist_b_expo.gph hist_b_inter.gph, title("Paramètres pour exposition et interaction:" "Sélection sur x (MAR)", color(black)) graphregion(fcolor(white))
+{res}{txt}
+{com}. 
+. gr export "selectx.eps", as(eps) preview(off) replace
+{txt}(file selectx.eps written in EPS format)
+
+{com}. 
+. 
+. *selection sur y
+. clear all
+{txt}
+{com}. capture program drop selecty
+{txt}
+{com}. program define selecty, rclass
+{txt}  1{com}. 
+. drop _all
+{txt}  2{com}. set obs 1000
+{txt}  3{com}. 
+. generate expo = rnormal(0,1)
+{txt}  4{com}. generate x = rnormal(0,1)
+{txt}  5{com}. generate inter=expo*x
+{txt}  6{com}. generate error = rnormal(0,1)
+{txt}  7{com}. generate y = 1 + expo + x + inter + error
+{txt}  8{com}. 
+. sort y
+{txt}  9{com}. gen n2=_n
+{txt} 10{com}. gen selecty=n2 <= 750
+{txt} 11{com}. 
+. regress y expo x inter if selecty==1
+{txt} 12{com}. 
+. return scalar bcons = _b[_cons]
+{txt} 13{com}. return scalar bexpo = _b[expo]
+{txt} 14{com}. return scalar bx = _b[x]
+{txt} 15{com}. return scalar binter = _b[inter]
+{txt} 16{com}. end
+{txt}
+{com}. 
+. simulate b_cons=r(bcons) b_expo=r(bexpo) b_x=r(bx) b_inter=r(binter), reps(1000) nodots: selecty
+{p2colset 7 17 21 2}{...}
+
+{txt}{p2col :command:}selecty{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_cons:}{res:r(bcons)}{p_end}
+{p2colset 8 17 21 2}{...}
+{p2col :b_expo:}{res:r(bexpo)}{p_end}
+{p2colset 11 17 21 2}{...}
+{p2col :b_x:}{res:r(bx)}{p_end}
+{p2colset 7 17 21 2}{...}
+{p2col :b_inter:}{res:r(binter)}{p_end}
+
+
+{com}. 
+. program drop _all
+{txt}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}b_cons {c |}{res}      1,000    .6501032    .0436375   .4756556   .7768875
+{txt}{space 6}b_expo {c |}{res}      1,000    .7575017    .0423007   .6335891   .8906894
+{txt}{space 9}b_x {c |}{res}      1,000    .7607323    .0415359   .5884346   .8960094
+{txt}{space 5}b_inter {c |}{res}      1,000    .8190863    .0436601   .6781988   .9803056
+{txt}
+{com}. hist b_expo, xtitle(exposition) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.63358909{txt}, width={res}.00886553{txt})
+{res}{txt}
+{com}. graph save hist_b_expo, replace
+{res}{txt}(file hist_b_expo.gph saved)
+
+{com}. hist b_inter, xtitle(interaction) ytitle(densité) graphregion(fcolor(white))
+{txt}(bin={res}29{txt}, start={res}.67819875{txt}, width={res}.01041748{txt})
+{res}{txt}
+{com}. graph save hist_b_inter, replace
+{res}{txt}(file hist_b_inter.gph saved)
+
+{com}. graph combine hist_b_expo.gph hist_b_inter.gph, title("Paramètres pour exposition et interaction:" "Sélection sur y (NMAR)", color(black)) graphregion(fcolor(white))
+{res}{txt}
+{com}. 
+. gr export "selecty.eps", as(eps) preview(off) replace
+{txt}(file selecty.eps written in EPS format)
+
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/nicot/Dropbox (CEDIA)/ULaval/Travail/SLIM/Selection/selectcode.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}11 Aug 2016, 11:17:53
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
