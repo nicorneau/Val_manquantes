@@ -6,7 +6,7 @@ output: html_document
 ---
 
 
-##Valeur manquante, estimation manquée?
+## Valeur manquante, estimation manquée?
 Ce repo présente une exploration des enjeux de valeur manquante dans le cas des modèles de régression. Les problèmes de biais liés à un phénomène de valeur manquante sont abordés. Les graphiques de même que le code STATA nécessaires à la rédaction du document LaTeX sont rendus disponibles.
 
 Enjoy!
