@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 AUG 2017 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 JAN 2018 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -435,350 +435,350 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--105
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--218
+Underfull \hbox (badness 10000) in paragraph at lines 213--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--249
+Underfull \hbox (badness 10000) in paragraph at lines 244--248
 
  []
 
 [4]
 Package epstopdf Info: Source file: <model.eps>
-(epstopdf)                    date: 2016-08-11 11:16:59
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 19358 bytes
 (epstopdf)             Output file: <model-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-06-17 13:49:47
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 6951 bytes
 (epstopdf)             Command: <repstopdf --outfile=model-eps-converted-to.pdf
  model.eps>
-(epstopdf)             \includegraphics on input line 289.
+(epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
  <model-eps-converted-to.pdf, id=32, 397.485pt x 289.08pt>
 File: model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use model-eps-converted-to.pdf>
-Package pdftex.def Info: model-eps-converted-to.pdf used on input line 289.
+Package pdftex.def Info: model-eps-converted-to.pdf used on input line 288.
 (pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
 Package epstopdf Info: Source file: <random.eps>
-(epstopdf)                    date: 2016-08-11 11:17:16
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 18795 bytes
 (epstopdf)             Output file: <random-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-06-17 13:49:48
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 7427 bytes
 (epstopdf)             Command: <repstopdf --outfile=random-eps-converted-to.pd
 f random.eps>
-(epstopdf)             \includegraphics on input line 294.
+(epstopdf)             \includegraphics on input line 293.
 Package epstopdf Info: Output file is already uptodate.
 
 <random-eps-converted-to.pdf, id=33, 397.485pt x 289.08pt>
 File: random-eps-converted-to.pdf Graphic file (type pdf)
 
 <use random-eps-converted-to.pdf>
-Package pdftex.def Info: random-eps-converted-to.pdf used on input line 294.
+Package pdftex.def Info: random-eps-converted-to.pdf used on input line 293.
 (pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
  [5 <./model-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <selectx.eps>
-(epstopdf)                    date: 2016-08-11 11:17:34
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 21395 bytes
 (epstopdf)             Output file: <selectx-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-06-17 13:49:48
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 7847 bytes
 (epstopdf)             Command: <repstopdf --outfile=selectx-eps-converted-to.p
 df selectx.eps>
-(epstopdf)             \includegraphics on input line 299.
+(epstopdf)             \includegraphics on input line 298.
 Package epstopdf Info: Output file is already uptodate.
 
 <selectx-eps-converted-to.pdf, id=42, 397.485pt x 289.08pt>
 File: selectx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use selectx-eps-converted-to.pdf>
-Package pdftex.def Info: selectx-eps-converted-to.pdf used on input line 299.
+Package pdftex.def Info: selectx-eps-converted-to.pdf used on input line 298.
 (pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
 Package epstopdf Info: Source file: <selecty.eps>
-(epstopdf)                    date: 2016-08-11 11:17:53
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 20921 bytes
 (epstopdf)             Output file: <selecty-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-06-17 13:49:48
+(epstopdf)                    date: 2017-10-12 08:41:57
 (epstopdf)                    size: 7949 bytes
 (epstopdf)             Command: <repstopdf --outfile=selecty-eps-converted-to.p
 df selecty.eps>
-(epstopdf)             \includegraphics on input line 304.
+(epstopdf)             \includegraphics on input line 303.
 Package epstopdf Info: Output file is already uptodate.
 
 <selecty-eps-converted-to.pdf, id=43, 397.485pt x 289.08pt>
 File: selecty-eps-converted-to.pdf Graphic file (type pdf)
 
 <use selecty-eps-converted-to.pdf>
-Package pdftex.def Info: selecty-eps-converted-to.pdf used on input line 304.
+Package pdftex.def Info: selecty-eps-converted-to.pdf used on input line 303.
 (pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
  [6 <./random-eps-converted-to.pdf> <./selectx-eps-converted-to.pdf>]
-Overfull \hbox (5.73096pt too wide) in paragraph at lines 307--308
+Overfull \hbox (5.73096pt too wide) in paragraph at lines 306--307
 []\OT1/cmr/m/n/10 Cet ex-em-ple ap-porte une autre preuve que seul le pro-ces-s
 us de s^^Selection sur $\OML/cmm/m/it/10 y$ \OT1/cmr/m/n/10 cause des probl^^Re
 mes syst^^Sematiques
  []
 
 [7 <./selecty-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 315--319
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 
-Overfull \hbox (4.34218pt too wide) in paragraph at lines 325--326
+Overfull \hbox (4.34218pt too wide) in paragraph at lines 324--325
 []\OT1/cmr/m/n/10 o^^Ru cette fois $\OML/cmm/m/it/10 s$ \OT1/cmr/m/n/10 n'est p
 lus le pro-ces-sus de s^^Selection des valeurs man-quantes mais une sim-ple var
 i-able. L'estimation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--366
+Underfull \hbox (badness 10000) in paragraph at lines 355--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--366
+Underfull \hbox (badness 10000) in paragraph at lines 355--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--366
+Underfull \hbox (badness 10000) in paragraph at lines 355--365
 
  []
 
 [8] <selectcode.pdf, id=72, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf>
-Package pdftex.def Info: selectcode.pdf used on input line 369.
+Package pdftex.def Info: selectcode.pdf used on input line 368.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf>
-Package pdftex.def Info: selectcode.pdf used on input line 369.
+Package pdftex.def Info: selectcode.pdf used on input line 368.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
  <selectcode.pdf, id=75, page=1, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 1>
-Package pdftex.def Info: selectcode.pdf, page1 used on input line 369.
+Package pdftex.def Info: selectcode.pdf, page1 used on input line 368.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 1>
-Package pdftex.def Info: selectcode.pdf, page1 used on input line 369.
+Package pdftex.def Info: selectcode.pdf, page1 used on input line 368.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 1>
-Package pdftex.def Info: selectcode.pdf, page1 used on input line 369.
+Package pdftex.def Info: selectcode.pdf, page1 used on input line 368.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 1>
-Package pdftex.def Info: selectcode.pdf, page1 used on input line 369.
+Package pdftex.def Info: selectcode.pdf, page1 used on input line 368.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 1>
-Package pdftex.def Info: selectcode.pdf, page1 used on input line 369.
+Package pdftex.def Info: selectcode.pdf, page1 used on input line 368.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [9 <./selectcode.pdf>]
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf>
-Package pdftex.def Info: selectcode.pdf used on input line 370.
+Package pdftex.def Info: selectcode.pdf used on input line 369.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf>
-Package pdftex.def Info: selectcode.pdf used on input line 370.
+Package pdftex.def Info: selectcode.pdf used on input line 369.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
  <selectcode.pdf, id=120, page=2, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 2>
-Package pdftex.def Info: selectcode.pdf, page2 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page2 used on input line 369.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 2>
-Package pdftex.def Info: selectcode.pdf, page2 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page2 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 2>
-Package pdftex.def Info: selectcode.pdf, page2 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page2 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 2>
-Package pdftex.def Info: selectcode.pdf, page2 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page2 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 2>
-Package pdftex.def Info: selectcode.pdf, page2 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page2 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [10 <./selectcode.pdf>]
 <selectcode.pdf, id=124, page=3, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 3>
-Package pdftex.def Info: selectcode.pdf, page3 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page3 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 3>
-Package pdftex.def Info: selectcode.pdf, page3 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page3 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 3>
-Package pdftex.def Info: selectcode.pdf, page3 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page3 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [11 <./selectcode.pdf>]
 <selectcode.pdf, id=128, page=4, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 4>
-Package pdftex.def Info: selectcode.pdf, page4 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page4 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 4>
-Package pdftex.def Info: selectcode.pdf, page4 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page4 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 4>
-Package pdftex.def Info: selectcode.pdf, page4 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page4 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [12 <./selectcode.pdf>]
 <selectcode.pdf, id=132, page=5, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 5>
-Package pdftex.def Info: selectcode.pdf, page5 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page5 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 5>
-Package pdftex.def Info: selectcode.pdf, page5 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page5 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 5>
-Package pdftex.def Info: selectcode.pdf, page5 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page5 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [13 <./selectcode.pdf>]
 <selectcode.pdf, id=137, page=6, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 6>
-Package pdftex.def Info: selectcode.pdf, page6 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page6 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 6>
-Package pdftex.def Info: selectcode.pdf, page6 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page6 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 6>
-Package pdftex.def Info: selectcode.pdf, page6 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page6 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [14 <./selectcode.pdf>]
 <selectcode.pdf, id=141, page=7, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 7>
-Package pdftex.def Info: selectcode.pdf, page7 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page7 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 7>
-Package pdftex.def Info: selectcode.pdf, page7 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page7 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 7>
-Package pdftex.def Info: selectcode.pdf, page7 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page7 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [15 <./selectcode.pdf>]
 <selectcode.pdf, id=145, page=8, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 8>
-Package pdftex.def Info: selectcode.pdf, page8 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page8 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 8>
-Package pdftex.def Info: selectcode.pdf, page8 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page8 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 8>
-Package pdftex.def Info: selectcode.pdf, page8 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page8 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [16 <./selectcode.pdf>]
 <selectcode.pdf, id=149, page=9, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 9>
-Package pdftex.def Info: selectcode.pdf, page9 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page9 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 9>
-Package pdftex.def Info: selectcode.pdf, page9 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page9 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 9>
-Package pdftex.def Info: selectcode.pdf, page9 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page9 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [17 <./selectcode.pdf>]
 <selectcode.pdf, id=153, page=10, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 10>
-Package pdftex.def Info: selectcode.pdf, page10 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page10 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 10>
-Package pdftex.def Info: selectcode.pdf, page10 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page10 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 10>
-Package pdftex.def Info: selectcode.pdf, page10 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page10 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [18 <./selectcode.pdf>]
 <selectcode.pdf, id=157, page=11, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 11>
-Package pdftex.def Info: selectcode.pdf, page11 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page11 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 11>
-Package pdftex.def Info: selectcode.pdf, page11 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page11 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 11>
-Package pdftex.def Info: selectcode.pdf, page11 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page11 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [19 <./selectcode.pdf>]
 <selectcode.pdf, id=162, page=12, 614.295pt x 794.97pt>
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 12>
-Package pdftex.def Info: selectcode.pdf, page12 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page12 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
  <use selectcode.pdf, page 12>
-Package pdftex.def Info: selectcode.pdf, page12 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page12 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: selectcode.pdf Graphic file (type pdf)
 
 <use selectcode.pdf, page 12>
-Package pdftex.def Info: selectcode.pdf, page12 used on input line 370.
+Package pdftex.def Info: selectcode.pdf, page12 used on input line 369.
 (pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
  [20 <./selectcode.pdf>] (./NCT-Selection.aux)
 
@@ -814,7 +814,7 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on NCT-Selection.pdf (20 pages, 392560 bytes).
+Output written on NCT-Selection.pdf (20 pages, 392571 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  155 compressed objects within 2 object streams
